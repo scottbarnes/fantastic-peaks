@@ -1,9 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import Image from 'next/image'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMountain, faHiking, faMap, faRoute, } from '@fortawesome/free-solid-svg-icons'
 import { faDiscord } from '@fortawesome/free-brands-svg-icons'
+import LandingPageButton from '../components/landing-page-button'
 // import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -31,42 +32,46 @@ const Home: NextPage = () => {
         </p>
 
         <div className="grid sm:grid-cols-1 md:grid-cols-4 md:gap-4 uppercase font-bold pt-3">
-          <div className="grid grid-cols-3 border-2 border-slate-300 md:border-slate-350 hover:bg-cyan-500 rounded p-3 items-center
-            hover:translate-x-1 hover:border-green-300">
-            <div>
-              <FontAwesomeIcon icon={faMountain} />
-            </div>
-            <div className="text-center col-span-2">
-              Peaks
-            </div>
-          </div>
-          <div className="grid grid-cols-3 border-2 border-slate-300 md:border-slate-350 hover:bg-cyan-500 rounded p-3 items-center
-            hover:translate-x-1 hover:border-green-300">
-            <div>
-              <FontAwesomeIcon icon={faRoute} />
-            </div>
-            <div className="text-center col-span-2">
-              Routes
-            </div>
-          </div>
-          <div className="grid grid-cols-3 border-2 border-slate-300 md:border-slate-350 hover:bg-cyan-500 rounded p-3 items-center
-            hover:translate-x-1 hover:border-green-300">
-            <div>
-              <FontAwesomeIcon icon={faHiking} />
-            </div>
-            <div className="text-center col-span-2">
-              Passes
-            </div>
-          </div>
-          <div className="grid grid-cols-3 border-2 border-slate-300 md:border-slate-350 hover:bg-cyan-500 rounded p-3 items-center
-            hover:translate-x-1 hover:border-green-300">
-            <div>
-              <FontAwesomeIcon icon={faDiscord} />
-            </div>
-            <div className="text-center col-span-2">
-              Discord
-            </div>
-          </div>
+          <LandingPageButton text="Peaks" icon={faMountain} />
+          <LandingPageButton text="Route" icon={faRoute} />
+          <LandingPageButton text="Passes" icon={faHiking} />
+          <LandingPageButton text="Discord" icon={faDiscord} />
+          {/* <div className="grid grid-cols-3 border-2 border-slate-300 md:border-slate-350 hover:bg-cyan-500 rounded p-3 items-center */}
+          {/*   hover:translate-x-1 hover:border-green-300"> */}
+          {/*   <div> */}
+          {/*     <FontAwesomeIcon icon={faMountain} /> */}
+          {/*   </div> */}
+          {/*   <div className="text-center col-span-2"> */}
+          {/*     Peaks */}
+          {/*   </div> */}
+          {/* </div> */}
+          {/* <div className="grid grid-cols-3 border-2 border-slate-300 md:border-slate-350 hover:bg-cyan-500 rounded p-3 items-center */}
+          {/*   hover:translate-x-1 hover:border-green-300"> */}
+          {/*   <div> */}
+          {/*     <FontAwesomeIcon icon={faRoute} /> */}
+          {/*   </div> */}
+          {/*   <div className="text-center col-span-2"> */}
+          {/*     Routes */}
+          {/*   </div> */}
+          {/* </div> */}
+          {/* <div className="grid grid-cols-3 border-2 border-slate-300 md:border-slate-350 hover:bg-cyan-500 rounded p-3 items-center */}
+          {/*   hover:translate-x-1 hover:border-green-300"> */}
+          {/*   <div> */}
+          {/*     <FontAwesomeIcon icon={faHiking} /> */}
+          {/*   </div> */}
+          {/*   <div className="text-center col-span-2"> */}
+          {/*     Passes */}
+          {/*   </div> */}
+          {/* </div> */}
+          {/* <div className="grid grid-cols-3 border-2 border-slate-300 md:border-slate-350 hover:bg-cyan-500 rounded p-3 items-center */}
+          {/*   hover:translate-x-1 hover:border-green-300"> */}
+          {/*   <div> */}
+          {/*     <FontAwesomeIcon icon={faDiscord} /> */}
+          {/*   </div> */}
+          {/*   <div className="text-center col-span-2"> */}
+          {/*     Discord */}
+          {/*   </div> */}
+          {/* </div> */}
         </div>
 
         <div>
