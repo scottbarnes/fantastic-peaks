@@ -24,10 +24,10 @@ const Home: NextPage = () => {
           &#123;And Where To Find Them&#125;
         </p>
         <p className="text-2xl text-left pt-3">
-          A <a href="https://www.churchofthehighsierra.org/">Church of the High Sierra</a> Project
+          A <a href="http://www.churchofthehighsierra.org/">Church of the High Sierra</a> Project
         </p>
 
-        <p className="text-2xl pt-3">
+        <p className="text-lg pt-3">
           Find routes, peaks, and passes from the over-crowded to the obscure.
         </p>
 
@@ -36,42 +36,8 @@ const Home: NextPage = () => {
           <LandingPageButton text="Route" icon={faRoute} />
           <LandingPageButton text="Passes" icon={faHiking} />
           <LandingPageButton text="Discord" icon={faDiscord} />
-          {/* <div className="grid grid-cols-3 border-2 border-slate-300 md:border-slate-350 hover:bg-cyan-500 rounded p-3 items-center */}
-          {/*   hover:translate-x-1 hover:border-green-300"> */}
-          {/*   <div> */}
-          {/*     <FontAwesomeIcon icon={faMountain} /> */}
-          {/*   </div> */}
-          {/*   <div className="text-center col-span-2"> */}
-          {/*     Peaks */}
-          {/*   </div> */}
-          {/* </div> */}
-          {/* <div className="grid grid-cols-3 border-2 border-slate-300 md:border-slate-350 hover:bg-cyan-500 rounded p-3 items-center */}
-          {/*   hover:translate-x-1 hover:border-green-300"> */}
-          {/*   <div> */}
-          {/*     <FontAwesomeIcon icon={faRoute} /> */}
-          {/*   </div> */}
-          {/*   <div className="text-center col-span-2"> */}
-          {/*     Routes */}
-          {/*   </div> */}
-          {/* </div> */}
-          {/* <div className="grid grid-cols-3 border-2 border-slate-300 md:border-slate-350 hover:bg-cyan-500 rounded p-3 items-center */}
-          {/*   hover:translate-x-1 hover:border-green-300"> */}
-          {/*   <div> */}
-          {/*     <FontAwesomeIcon icon={faHiking} /> */}
-          {/*   </div> */}
-          {/*   <div className="text-center col-span-2"> */}
-          {/*     Passes */}
-          {/*   </div> */}
-          {/* </div> */}
-          {/* <div className="grid grid-cols-3 border-2 border-slate-300 md:border-slate-350 hover:bg-cyan-500 rounded p-3 items-center */}
-          {/*   hover:translate-x-1 hover:border-green-300"> */}
-          {/*   <div> */}
-          {/*     <FontAwesomeIcon icon={faDiscord} /> */}
-          {/*   </div> */}
-          {/*   <div className="text-center col-span-2"> */}
-          {/*     Discord */}
-          {/*   </div> */}
-          {/* </div> */}
+          {/* There must be a better way to handle this 'bottom' border on mobile. */}
+          <div className="border-t-2 md:border-0"></div>
         </div>
 
         <div>
