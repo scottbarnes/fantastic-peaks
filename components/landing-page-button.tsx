@@ -12,20 +12,20 @@ const LandingPageButton = ({ text, icon}: LandingPageButtonProps) => (
     border-t-2
     md:border-2
     border-slate-300
-    grid
-    grid-cols-3
-    hover:bg-cyan-500
+    basis-1/4
+    hover:bg-sky-600
     hover:border-green-300
     hover:translate-x-1
-    items-center
     md:border-slate-350
     p-4
     rounded
+    flex
+    items-center
   ">
     <div>
       <FontAwesomeIcon icon={icon} className="h-10 md:h-12"/>
     </div>
-    <div className="text-center col-span-2">
+    <div className="text-center basis-3/4">
       {text}
     </div>
   </div>

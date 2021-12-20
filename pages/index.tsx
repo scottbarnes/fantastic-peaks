@@ -1,30 +1,30 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-// import Image from 'next/image'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMountain, faHiking, faMap, faRoute, } from '@fortawesome/free-solid-svg-icons'
+import { faMountain, faHiking, faRoute, } from '@fortawesome/free-solid-svg-icons'
 import { faDiscord } from '@fortawesome/free-brands-svg-icons'
 import LandingPageButton from '../components/landing-page-button'
-// import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-gradient-to-r from-cyan-500 to-blue-500">
+    <div className="bg-gradient-to-r from-indigo-600 to-indigo-900">
       <Head>
         <title>Fantastic Peaks</title>
         <meta name="description" content="Fantastic Peaks and Where to Find Them" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="sm:container sm:mx-auto p-4 font-sans">
+      <main className="sm:container sm:mx-auto p-4 font-sans text-slate-100">
         <p className="text-4xl md:text-5xl font-bold text-left">
           Fantastic Peaks
         </p>
         <p className="text-2xl md:text-3xl text-left">
-          &#123;And Where To Find Them&#125;
+          {'{'}And Where To Find Them{'}'}
         </p>
         <p className="text-2xl text-left pt-3">
-          A <a href="http://www.churchofthehighsierra.org/">Church of the High Sierra</a> Project
+          A <a
+            href="http://www.churchofthehighsierra.org/"
+            className="text-sky-400 hover:text-sky-300"
+          >Church of the High Sierra</a> Project
         </p>
 
         <p className="text-lg pt-3">
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
 
         <div className="grid sm:grid-cols-1 md:grid-cols-4 md:gap-4 uppercase font-bold pt-3">
           <LandingPageButton text="Peaks" icon={faMountain} />
-          <LandingPageButton text="Route" icon={faRoute} />
+          <LandingPageButton text="Routes" icon={faRoute} />
           <LandingPageButton text="Passes" icon={faHiking} />
           <LandingPageButton text="Discord" icon={faDiscord} />
           {/* There must be a better way to handle this 'bottom' border on mobile. */}
