@@ -6,6 +6,7 @@ type LandingPageButtonProps = {
   icon: IconProp,
 }
 
+// LandingPageButton returns one of the main buttons on the landing page.
 const LandingPageButton = ({ text, icon}: LandingPageButtonProps) => (
   <div className="
     border-x-2

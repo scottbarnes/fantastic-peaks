@@ -1,5 +1,12 @@
 // Template for individual pass pages.
+import Head from 'next/head'
+import Link from 'next/link'
+import { GetStaticProps } from 'next'
 
+import BreadCrumbs, { BreadCrumb } from '../../components/breadcrumbs'
+import Container from '../../components/container'
+import Header from '../../components/header'
+import Layout from '../../components/layout'
 import { getAllPassIds, getPassData } from '../../lib/passes'
 
 interface Pass {
@@ -12,6 +19,28 @@ interface Pass {
 
 interface Props {
   id: string
+}
+
+// Pass returns the Pass template page with data filled in via getStaticProps
+// and the Next.js dynamic routing.
+export default function Pass({ passData }: { passData: Pass }) {
+  return (
+    <Layout>
+      <Head>
+        <title>FP: {passData.name}</title>
+      </Head>
+      <Container>
+        <Header />
+        <BreadCrumbs crumbs={[
+          {name: 'Passes', link: '/', isLast: false },
+          {name: 'Regions', link: '/', isLast: false },
+          {name: passData.name, link: '/', isLast: true },
+        ]} />
+        <p className="font-semibold text-2xl mt-2">{passData.name} ({passData.class_rating})</p>
+        <p className="mt-2">{passData.description}</p>
+      </Container>
+    </Layout>
+  )
 }
 
 export async function getStaticPaths() {
@@ -33,32 +62,3 @@ export async function getStaticProps({ params }: { params: Props }) {
   }
 }
 
-// Pass returns the Pass template page with data filled in via getStaticProps
-// and the Next.js dynamic routing.
-export default function Pass({ passData }: { passData: Pass }) {
-  return (
-    <div>
-      <p>{passData.name}</p>
-      <p>{passData.class_rating}</p>
-      <p>{passData.description}</p>
-    </div>
-  )
-}
-
-
-
-{/* const PassItem: React.FC<Pass> = ({ name, elevations, class_rating, description, slug }) => ( */}
-{/*   <div> */}
-{/*     <p> */}
-{/*       <Link href={`/passes/${encodeURIComponent(slug)}`}> */}
-{/*         <a className="text-blue-700 hover:text-blue-900">{name}</a> */}
-{/*       </Link> */}
-{/*     </p> */}
-{/*     <p>Elevation(s): {elevations.join(' ft.; ') + ' ft.'}</p> */}
-{/*     <p>Class: {class_rating}</p> */}
-{/*   </div> */}
-
-
-{/*   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:justify-items-start"> */}
-{/*     <PassOverview passes={passData} /> */}
-{/*   </div> */}
