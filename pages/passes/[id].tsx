@@ -1,7 +1,7 @@
 // Template for individual pass pages.
 import Head from 'next/head'
 import Link from 'next/link'
-import { GetStaticProps } from 'next'
+// import { GetStaticProps } from 'next'
 
 import BreadCrumbs, { BreadCrumb } from '../../components/breadcrumbs'
 import Container from '../../components/container'
@@ -10,10 +10,11 @@ import Layout from '../../components/layout'
 import { getAllPassIds, getPassData } from '../../lib/passes'
 
 interface Pass {
-  name: string,
-  elevations: string[],
   class_rating: string,
   description: string,
+  elevations: string[],
+  name: string,
+  region: string,
   slug: string,
 }
 
@@ -33,7 +34,7 @@ export default function Pass({ passData }: { passData: Pass }) {
         <Header />
         <BreadCrumbs crumbs={[
           {name: 'Passes', link: '/', isLast: false },
-          {name: 'Regions', link: '/', isLast: false },
+          {name: passData.region, link: '/', isLast: false },
           {name: passData.name, link: '/', isLast: true },
         ]} />
         <p className="font-semibold text-2xl mt-2">{passData.name} ({passData.class_rating})</p>
