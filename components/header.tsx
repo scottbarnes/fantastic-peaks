@@ -11,9 +11,13 @@ const links = [
 
 const Header = () => (
   <header>
-    <nav className="bg-blue-300 rounded-md w-full">
-      <span><a className="text-blue-700 hover:text-blue-900 hover:underline p-3">{'{FP}'}</a></span>
-      <ol className="flex justify-center">
+    <nav className="bg-blue-300 rounded-md w-full flex">
+      <div className="flex-none flex">
+      <Link href="/">
+        <a className="text-blue-700 hover:text-blue-900 hover:underline p-3"><span>{'{FP}'}</span></a>
+      </Link>
+      </div>
+      <ol className="grow flex justify-center">
         {links.map(({href, label}) => (
           <li key={`${href}+${label}`} className="text-blue-700 hover:text-blue-900 hover:underline p-3">
             <Link href={href}>
