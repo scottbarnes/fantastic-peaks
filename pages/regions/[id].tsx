@@ -97,7 +97,7 @@ const Region = ({ regionData }: RegionProps) => {
   return (
     <Layout>
       <Head>
-        <title>FP: {regionData.Name}</title>
+        <title>FP: {regionData.name}</title>
       </Head>
       <Container>
         <Header />

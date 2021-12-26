@@ -15,6 +15,7 @@ interface Pass {
   elevations: string[],
   name: string,
   region: string,
+  region_slug: string,
   slug: string,
 }
 
@@ -34,11 +35,13 @@ export default function Pass({ passData }: { passData: Pass }) {
         <Header />
         <BreadCrumbs crumbs={[
           {name: 'Regions', link: '/regions', isLast: false },
-          {name: passData.region, link: passData.slug, isLast: false },
+          {name: passData.region, link: "/regions/" + passData.region_slug, isLast: false },
           {name: passData.name, link: '/', isLast: true },
         ]} />
-        <p className="font-semibold text-2xl mt-2">{passData.name} ({passData.class_rating})</p>
-        <p className="mt-2">{passData.description}</p>
+        <p className="font-semibold text-2xl mt-2 text-center">{passData.name} ({passData.class_rating})</p>
+        <div className="m:max-w-m justify-center flex">
+          <p className="mt-2 max-w-prose">{passData.description}</p>
+        </div>
       </Container>
     </Layout>
   )
