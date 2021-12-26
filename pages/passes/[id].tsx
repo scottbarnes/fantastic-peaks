@@ -33,8 +33,8 @@ export default function Pass({ passData }: { passData: Pass }) {
       <Container>
         <Header />
         <BreadCrumbs crumbs={[
-          {name: 'Passes', link: '/', isLast: false },
-          {name: passData.region, link: '/', isLast: false },
+          {name: 'Regions', link: '/regions', isLast: false },
+          {name: passData.region, link: passData.slug, isLast: false },
           {name: passData.name, link: '/', isLast: true },
         ]} />
         <p className="font-semibold text-2xl mt-2">{passData.name} ({passData.class_rating})</p>
