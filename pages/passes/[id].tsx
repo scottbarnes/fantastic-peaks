@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 // import { GetStaticProps } from 'next'
 
-import BreadCrumbs, { BreadCrumb } from '../../components/breadcrumbs'
+import BreadCrumbs from '../../components/breadcrumbs'
 import Container from '../../components/container'
 import Header from '../../components/header'
 import Layout from '../../components/layout'
