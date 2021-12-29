@@ -12,4 +12,14 @@ services:
       - .:/app
     ports:
       - '3000:3000'
-    stdin_open: true
+
+  cypress:
+    image: cypress/included:9.2.0
+    container_name: fp_cypress_dev
+    depends_on:
+      - nextjs
+    environment:
+      - cypress_baseUrl=http://nextjs:3000
+    working_dir: /e2e
+    volumes:
+      - ./:/e2e

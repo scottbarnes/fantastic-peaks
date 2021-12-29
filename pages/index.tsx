@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Link from 'next/link'
 import { faMountain, faHiking, faRoute, } from '@fortawesome/free-solid-svg-icons'
 import { faDiscord } from '@fortawesome/free-brands-svg-icons'
 import LandingPageButton from '../components/landing-page-button'
@@ -32,9 +33,11 @@ const Home: NextPage = () => {
         </p>
 
         <div className="grid sm:grid-cols-1 md:grid-cols-4 md:gap-4 uppercase font-bold pt-3">
-          <LandingPageButton text="Peaks" icon={faMountain} />
-          <LandingPageButton text="Routes" icon={faRoute} />
-          <LandingPageButton text="Passes" icon={faHiking} />
+          <Link href="/regions">
+            <a><LandingPageButton text="Browse by region" icon={faMountain} /></a>
+          </Link>
+          {/* <LandingPageButton text="Routes" icon={faRoute} /> */}
+          {/* <LandingPageButton text="Passes" icon={faHiking} /> */}
           <LandingPageButton text="Discord" icon={faDiscord} />
           {/* There must be a better way to handle this 'bottom' border on mobile. */}
           <div className="border-t-2 md:border-0"></div>
