@@ -1,0 +1,8 @@
+compose
+development.yml
+production.yml
+.dockerignore
+node_modules
+npm-debug.log
+README.md
+.next

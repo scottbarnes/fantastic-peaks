@@ -88,7 +88,6 @@ const PeakOverview: React.FC<PeakProps> = ({ peaks }) => (
 )
 
 const Region = ({ regionData }: RegionProps) => {
-  console.log(regionData.passes)
   const breadCrumbs = [
     {name: 'Regions', link: '/regions', id: 3, isLast: false},
     {name: regionData.name, link: 't3', id: '5', isLast: true},
