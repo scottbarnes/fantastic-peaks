@@ -23,4 +23,22 @@ describe('Connect and navigate', () => {
     cy.get('meta[name="description"]')
       .should("have.attr", "content", "Copper Pass: Copper Pass just north of the head of the divide between Cloud and Deadman Canyons takes honors for roughness. For a way it traverses an elevated...")
   })
+
+  it('navigates to table mountain, then back via breadcrumbs', () => {
+    cy.visit('/regions')
+    cy.contains('The Kaweahs').click()
+    cy.url().should('include', '/regions/the-kaweahs')
+    cy.contains('Table Mountain').click()
+    cy.url().should('include', '/peaks/table-mountain')
+    // Check peak content
+    cy.contains('Paul Shoup')
+    cy.contains('North face')
+    cy.contains('Table Mountain (13,646 ft.)')
+    // Check the breadcrumbs
+    cy.contains('The Kaweahs and the Great Western Divide').click()
+    cy.contains('Copper Pass')
+    cy.contains('Regions').click()
+    cy.get('a[href*="/regions"]').click({ multiple: true })
+  })
+
 })

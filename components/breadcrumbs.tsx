@@ -38,7 +38,7 @@ const BreadCrumbs = ({ crumbs }: Props) => {
           return (
             <React.Fragment key={`${name}+${link}`}>
               <span className="text-gray-500 mx-1">/</span>
-              <li><a href={link} className="text-blue-600 hover:text-blue-800">{name}</a></li>
+              <li><a href={link} className="breadcrumb text-blue-600 hover:text-blue-800">{name}</a></li>
             </React.Fragment>
           )
         })}

@@ -16,7 +16,7 @@ interface Props {
 // Pass returns the Pass template page with data filled in via getStaticProps
 // and the Next.js dynamic routing.
 // export default function Pass({ passData }: { passData: Pass }) {
-const PassPage = ({name, region, region_slug, description, class_rating}: PassProps) => {
+const PassPage = ({name, region, region_slug, description, class_rating, elevations}: PassProps) => {
   const metaDesc = metaDescriptionMaker(name, description)
 
   return (
@@ -31,7 +31,8 @@ const PassPage = ({name, region, region_slug, description, class_rating}: PassPr
           {name: region, link: "/regions/" + region_slug, isLast: false },
           {name: name, link: '/', isLast: true },
         ]} />
-        <p className="font-semibold text-2xl mt-2 text-center">{name} ({class_rating})</p>
+
+        <p className="font-semibold text-2xl mt-2 text-center">{name} ({class_rating}) ({elevations.join(' ft.; ') + ' ft.'})</p>
         <div className="m:max-w-m justify-center flex">
           <p className="mt-2 max-w-prose">{description}</p>
         </div>

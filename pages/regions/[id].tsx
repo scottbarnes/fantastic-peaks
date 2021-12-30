@@ -14,16 +14,6 @@ import PeaksList from '../../components/peaksList'
 // Thanks to https://www.pluralsight.com/guides/use-interface-props-in-functional-components-using-typescript-with-react
 // for help with the interfaces.
 
-interface Peak {
-  name: string,
-  elevations: string[];
-  slug: string,
-}
-
-interface PeakProps {
-  peaks: Peak[],
-}
-
 interface Props {
   id: string,
 }
@@ -33,9 +23,6 @@ const Region = ({ name, passes, peaks }: RegionProps) => {
     {name: 'Regions', link: '/regions', id: 3, isLast: false},
     {name: name, link: 't3', id: '5', isLast: true},
   ]
-
-  console.log(`Passes are: {passes}`)
-
 
   return (
     <Layout>
