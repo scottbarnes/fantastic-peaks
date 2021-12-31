@@ -25,5 +25,13 @@ module.exports = {
     react: {
       version: "detect"
     }
-  }
+  },
+  rules: {
+    "react/function-component-definition": [
+      2,
+      {
+        namedComponents: "function-declaration",
+      },
+    ],
+  },
 }
