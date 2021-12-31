@@ -1,5 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 type LandingPageButtonProps = {
   text: string;
@@ -11,7 +11,7 @@ const LandingPageButton = ({ text, icon }: LandingPageButtonProps) => (
   <div
     className="
     border-x-2
-    border-t-2
+    border-y-2
     md:border-2
     border-slate-300
     basis-1/4

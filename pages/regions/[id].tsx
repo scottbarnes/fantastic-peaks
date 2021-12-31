@@ -1,15 +1,12 @@
 // Template for indivdual region pages.
-import Link from "next/link";
-import Head from "next/head";
-
-import Container from "../../components/container";
-import Header from "../../components/header";
-import Layout from "../../components/layout";
-// import { GetStaticProps } from 'next'
-import BreadCrumbs from "../../components/breadcrumbs";
-import { getRegionData, getAllRegionIds, RegionProps } from "../../lib/regions";
-import PassesList from "../../components/passesList";
-import PeaksList from "../../components/peaksList";
+import Head from 'next/head';
+import Container from '../../components/container';
+import Header from '../../components/header';
+import Layout from '../../components/layout';
+import BreadCrumbs from '../../components/breadcrumbs';
+import { getRegionData, getAllRegionIds, RegionProps } from '../../lib/regions';
+import PassesList from '../../components/passesList';
+import PeaksList from '../../components/peaksList';
 
 // Thanks to https://www.pluralsight.com/guides/use-interface-props-in-functional-components-using-typescript-with-react
 // for help with the interfaces.
@@ -20,14 +17,18 @@ interface Props {
 
 const Region = ({ name, passes, peaks }: RegionProps) => {
   const breadCrumbs = [
-    { name: "Regions", link: "/regions", id: 3, isLast: false },
-    { name: name, link: "t3", id: "5", isLast: true },
+    {
+      name: 'Regions', link: '/regions', id: 3, isLast: false,
+    },
+    {
+      name, link: 't3', id: '5', isLast: true,
+    },
   ];
 
   return (
-    <Layout>
+    <Layout metaDescription={`The peaks and passes for ${name}`}>
       <Head>
-        <title>FP: {name}</title>
+        <title>{`FP: ${name}`}</title>
       </Head>
       <Container>
         <Header />
@@ -46,7 +47,8 @@ const Region = ({ name, passes, peaks }: RegionProps) => {
   );
 };
 
-export async function getStaticPaths() {
+// replace async when calling from API
+export function getStaticPaths() {
   const paths = getAllRegionIds();
   return {
     paths,
@@ -55,7 +57,8 @@ export async function getStaticPaths() {
 }
 
 // export const getStaticProps: GetStaticProps = async ({ params }) => {
-export async function getStaticProps({ params }: { params: Props }) {
+// replace async when calling from API
+export function getStaticProps({ params }: { params: Props }) {
   const regionData = getRegionData(params.id);
 
   if (!regionData) {

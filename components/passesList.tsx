@@ -1,7 +1,6 @@
 // Display a list of <PassItem>
 
-import PassItem from "./passItem";
-import { PassProps } from "./passItem";
+import PassItem, { PassProps } from './passItem';
 
 // Thanks to https://www.pluralsight.com/guides/use-interface-props-in-functional-components-using-typescript-with-react for help with the interfaces
 
@@ -9,7 +8,7 @@ interface PassesListProps {
   passes: PassProps[];
 }
 
-const PassesList: React.FC<PassesListProps> = ({ passes }: PassesListProps) => (
+const PassesList = ({ passes }: PassesListProps): JSX.Element => (
   <>
     {passes.map((p) => (
       <PassItem
