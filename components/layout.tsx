@@ -1,9 +1,9 @@
-import Meta from './meta'
+import Meta from "./meta";
 
 type Props = {
-  children: React.ReactNode
-  metaDescription: string
-}
+  children: React.ReactNode;
+  metaDescription: string;
+};
 
 // Layout sets the screen size and the meta description for the page.
 const Layout = ({ children, metaDescription }: Props) => (
@@ -13,6 +13,6 @@ const Layout = ({ children, metaDescription }: Props) => (
       <main className="p-4 font-sans">{children}</main>
     </div>
   </>
-)
+);
 
-export default Layout
+export default Layout;

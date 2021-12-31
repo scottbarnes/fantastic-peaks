@@ -11,7 +11,7 @@ services:
       - /app/node_modules
       - .:/app
     ports:
-      - '3000:3000'
+      - "3000:3000"
 
   cypress:
     image: cypress/included:9.2.0

@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 
 export interface BreadCrumb {
-  name: string,
-  link: string,
-  isLast: boolean,
+  name: string;
+  link: string;
+  isLast: boolean;
 }
 
 interface Props {
-  crumbs: BreadCrumb[]
+  crumbs: BreadCrumb[];
 }
 
 // // For passing an array of BreadCrumb. React.FC would be <BreadCrumbs> with an s.
@@ -23,28 +23,35 @@ const BreadCrumbs = ({ crumbs }: Props) => {
   return (
     <>
       <ol className="flex">
-        <span className="text-gray-500 mx-1">{'>'}</span>
-        {crumbs.map(({name, link, isLast}) => {
+        <span className="text-gray-500 mx-1">{">"}</span>
+        {crumbs.map(({ name, link, isLast }) => {
           // isLast isn't a link.
           if (isLast) {
-            return ( 
+            return (
               <React.Fragment key={`${name}+${link}`}>
                 <span className="text-gray-500 mx-1">/</span>
                 <li className="">{name}</li>
               </React.Fragment>
-            )
+            );
           }
 
           return (
             <React.Fragment key={`${name}+${link}`}>
               <span className="text-gray-500 mx-1">/</span>
-              <li><a href={link} className="breadcrumb text-blue-600 hover:text-blue-800">{name}</a></li>
+              <li>
+                <a
+                  href={link}
+                  className="breadcrumb text-blue-600 hover:text-blue-800"
+                >
+                  {name}
+                </a>
+              </li>
             </React.Fragment>
-          )
+          );
         })}
       </ol>
     </>
-  )
-}
+  );
+};
 
-export default BreadCrumbs
+export default BreadCrumbs;

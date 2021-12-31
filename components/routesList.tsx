@@ -1,14 +1,14 @@
 // The routes list as displayed on /peaks/<slug>
 
-import RouteItem, { RouteProps } from './routeItem'
+import RouteItem, { RouteProps } from "./routeItem";
 
 interface RouteItemProps {
-  routes: RouteProps[],
+  routes: RouteProps[];
 }
 
 const RoutesList: React.FC<RouteItemProps> = ({ routes }) => (
   <>
-    {routes.map((route) => 
+    {routes.map((route) => (
       <RouteItem
         key={route.slug}
         name={route.name}
@@ -17,8 +17,8 @@ const RoutesList: React.FC<RouteItemProps> = ({ routes }) => (
         slug={route.slug}
         aka={route.aka}
       />
-    )}
+    ))}
   </>
-)
+);
 
-export default RoutesList
+export default RoutesList;

@@ -1,16 +1,23 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Link from 'next/link'
-import { faMountain, faHiking, faRoute, } from '@fortawesome/free-solid-svg-icons'
-import { faDiscord } from '@fortawesome/free-brands-svg-icons'
-import LandingPageButton from '../components/landing-page-button'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import {
+  faMountain,
+  faHiking,
+  faRoute,
+} from "@fortawesome/free-solid-svg-icons";
+import { faDiscord } from "@fortawesome/free-brands-svg-icons";
+import LandingPageButton from "../components/landing-page-button";
 
 const Home: NextPage = () => {
   return (
     <div className="bg-gradient-to-r from-indigo-600 to-indigo-900">
       <Head>
         <title>Fantastic Peaks</title>
-        <meta name="description" content="Fantastic Peaks and Where to Find Them" />
+        <meta
+          name="description"
+          content="Fantastic Peaks and Where to Find Them"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -19,13 +26,17 @@ const Home: NextPage = () => {
           Fantastic Peaks
         </p>
         <p className="text-2xl md:text-3xl text-left">
-          {'{'}And Where To Find Them{'}'}
+          {"{"}And Where To Find Them{"}"}
         </p>
         <p className="text-2xl text-left pt-3">
-          A <a
+          A{" "}
+          <a
             href="http://www.churchofthehighsierra.org/"
             className="text-sky-400 hover:text-sky-300"
-          >Church of the High Sierra</a> Project
+          >
+            Church of the High Sierra
+          </a>{" "}
+          Project
         </p>
 
         <p className="text-lg pt-3">
@@ -34,7 +45,9 @@ const Home: NextPage = () => {
 
         <div className="grid sm:grid-cols-1 md:grid-cols-4 md:gap-4 uppercase font-bold pt-3">
           <Link href="/regions">
-            <a><LandingPageButton text="Browse by region" icon={faMountain} /></a>
+            <a>
+              <LandingPageButton text="Browse by region" icon={faMountain} />
+            </a>
           </Link>
           {/* <LandingPageButton text="Routes" icon={faRoute} /> */}
           {/* <LandingPageButton text="Passes" icon={faHiking} /> */}
@@ -57,14 +70,11 @@ const Home: NextPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <span>
-            ...nothing.
-          </span>
+          Powered by <span>...nothing.</span>
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
