@@ -2,13 +2,20 @@
 // Thanks to https://www.pluralsight.com/guides/use-interface-props-in-functional-components-using-typescript-with-react
 // for help with the interfaces
 
-import PeakItem, { PeakProps } from "./peakItem";
+import PeakItem from './peakItem';
 
-interface PeakItemProps {
+type PeakProps = {
+  // peaks: PeakProps[];
+  slug: string;
+  name: string;
+  elevations: string[];
+};
+
+type PeakListProps = {
   peaks: PeakProps[];
-}
+};
 
-const PeaksList: React.FC<PeakItemProps> = ({ peaks }) => (
+const PeaksList = ({ peaks }: PeakListProps): JSX.Element => (
   <>
     {peaks.map((p) => (
       <PeakItem

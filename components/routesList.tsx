@@ -1,12 +1,12 @@
 // The routes list as displayed on /peaks/<slug>
 
-import RouteItem, { RouteProps } from "./routeItem";
+import RouteItem, { RouteProps } from './routeItem';
 
-interface RouteItemProps {
+type RouteItemProps = {
   routes: RouteProps[];
-}
+};
 
-const RoutesList: React.FC<RouteItemProps> = ({ routes }) => (
+const RoutesList = ({ routes }: RouteItemProps): JSX.Element => (
   <>
     {routes.map((route) => (
       <RouteItem

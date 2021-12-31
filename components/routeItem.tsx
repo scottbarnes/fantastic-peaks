@@ -8,15 +8,14 @@ export type RouteProps = {
   slug: string;
 };
 
-const RouteItem: React.FC<RouteProps> = ({
+const RouteItem = ({
   name,
-  slug,
   class_rating,
   description,
-}) => (
+}: RouteProps) => (
   <div className="">
     <p className="max-w-prose mt-4 font-semi-bold text-xl">
-      {name}. ({class_rating})
+      {`${name}.(${class_rating})`}
     </p>
     <p className="max-w-prose">{description}</p>
   </div>
