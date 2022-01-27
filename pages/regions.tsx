@@ -1,13 +1,13 @@
 // regions.tsx displays and links to all regions.
-import Head from 'next/head';
-import Link from 'next/link';
-import { GetStaticProps } from 'next';
-import BreadCrumbs from '../components/breadcrumbs';
-import Container from '../components/container';
-import Header from '../components/header';
-import Layout from '../components/layout';
+import Head from "next/head";
+import Link from "next/link";
+import { GetStaticProps } from "next";
+import BreadCrumbs from "../components/breadcrumbs";
+import Container from "../components/container";
+import Header from "../components/header";
+import Layout from "../components/layout";
 // import { Region } from '../lib/regions';
-import { getAllRegions, RegionProps } from '../lib/regions';
+import { regionsData, RegionProps } from "../lib/regions";
 
 interface Props {
   regionData: RegionProps[];
@@ -16,7 +16,10 @@ interface Props {
 const Regions = ({ regionData }: Props) => {
   const breadCrumbs = [
     {
-      name: 'Regions', link: '/regions', id: 3, isLast: true,
+      name: "Regions",
+      link: "/regions",
+      id: 3,
+      isLast: true,
     },
   ];
 
@@ -50,8 +53,9 @@ const Regions = ({ regionData }: Props) => {
 // to do so. Here it loads the region data and passes it as Props to
 // Regions.
 // "async" can go back in when this pulls from an API.
-export const getStaticProps: GetStaticProps = () => {
-  const regionData: RegionProps[] = getAllRegions();
+export const getStaticProps: GetStaticProps = async () => {
+  // const regionData: RegionProps[] = getAllRegions();
+  const regionData = await regionsData();
 
   if (!regionData) {
     return {
