@@ -4,7 +4,7 @@
 // introduced to force a linting failure.
 // import fs from "fs";
 // import path from 'path';
-import { PeakProps } from "../components/peakItem";
+import { PeakProps } from '../components/peakItem';
 
 // const dataDirectory = path.join(process.cwd(), 'dataFiles');
 // const dataBuffer = fs.readFileSync(
@@ -15,7 +15,7 @@ import { PeakProps } from "../components/peakItem";
 const peaksData = async () => {
   // const response = await fetch('http://localhost:8080/v1/peaks');
   const response = await fetch(
-    `${process.env.PEAKS_API || "error reading file"}`
+    `${process.env.PEAKS_API || 'error reading file'}`,
   );
   const json = (await response.json()) as Promise<PeakProps[]>;
   return json;

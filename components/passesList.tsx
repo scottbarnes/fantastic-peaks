@@ -1,6 +1,6 @@
 // Display a list of <PassItem>
 
-import PassItem, { PassProps } from "./passItem";
+import PassItem, { PassProps } from './passItem';
 
 // Thanks to https://www.pluralsight.com/guides/use-interface-props-in-functional-components-using-typescript-with-react for help with the interfaces
 

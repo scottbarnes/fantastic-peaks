@@ -6,7 +6,7 @@ const findCharIdx = (str: string, chars: string[]): number => {
 
   // Return the index of a period if found, and track the last 'space'.
   while (i <= 151) {
-    if (str[i] === " ") {
+    if (str[i] === ' ') {
       lastSpace = i;
     }
     if (chars.includes(str[i])) {
@@ -21,7 +21,7 @@ const findCharIdx = (str: string, chars: string[]): number => {
 // metaDescriptionMaker parses a string to create content for the 'meta description'
 // HTML tag.
 const metaDescriptionMaker = (name: string, description: string): string => {
-  const lastChar = findCharIdx(description, [".", ";"]);
+  const lastChar = findCharIdx(description, ['.', ';']);
 
   return `${name}: ${description.slice(0, lastChar)}...`;
 };

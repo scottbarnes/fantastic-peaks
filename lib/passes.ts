@@ -3,7 +3,7 @@
 
 // import fs from 'fs';
 // import path from 'path';
-import { PassProps } from "../components/passItem";
+import { PassProps } from '../components/passItem';
 
 // const dataDirectory = path.join(process.cwd(), 'dataFiles');
 // const dataBuffer = fs.readFileSync(
@@ -13,7 +13,7 @@ import { PassProps } from "../components/passItem";
 
 const passesData = async () => {
   const response = await fetch(
-    `${process.env.PASSES_API || "error reading file"}`
+    `${process.env.PASSES_API || 'error reading file'}`,
   );
   const json = (await response.json()) as Promise<PassProps[]>;
   return json;

@@ -1,13 +1,13 @@
 // regions.tsx displays and links to all regions.
-import Head from "next/head";
-import Link from "next/link";
-import { GetStaticProps } from "next";
-import BreadCrumbs from "../components/breadcrumbs";
-import Container from "../components/container";
-import Header from "../components/header";
-import Layout from "../components/layout";
+import Head from 'next/head';
+import Link from 'next/link';
+import { GetStaticProps } from 'next';
+import BreadCrumbs from '../components/breadcrumbs';
+import Container from '../components/container';
+import Header from '../components/header';
+import Layout from '../components/layout';
 // import { Region } from '../lib/regions';
-import { regionsData, RegionProps } from "../lib/regions";
+import { regionsData, RegionProps } from '../lib/regions';
 
 interface Props {
   regionData: RegionProps[];
@@ -16,8 +16,8 @@ interface Props {
 const Regions = ({ regionData }: Props) => {
   const breadCrumbs = [
     {
-      name: "Regions",
-      link: "/regions",
+      name: 'Regions',
+      link: '/regions',
       id: 3,
       isLast: true,
     },

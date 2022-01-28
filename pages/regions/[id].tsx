@@ -1,12 +1,12 @@
 // Template for indivdual region pages.
-import Head from "next/head";
-import Container from "../../components/container";
-import Header from "../../components/header";
-import Layout from "../../components/layout";
-import BreadCrumbs from "../../components/breadcrumbs";
-import { getRegionData, getAllRegionIds, RegionProps } from "../../lib/regions";
-import PassesList from "../../components/passesList";
-import PeaksList from "../../components/peaksList";
+import Head from 'next/head';
+import Container from '../../components/container';
+import Header from '../../components/header';
+import Layout from '../../components/layout';
+import BreadCrumbs from '../../components/breadcrumbs';
+import { getRegionData, getAllRegionIds, RegionProps } from '../../lib/regions';
+import PassesList from '../../components/passesList';
+import PeaksList from '../../components/peaksList';
 
 // Thanks to https://www.pluralsight.com/guides/use-interface-props-in-functional-components-using-typescript-with-react
 // for help with the interfaces.
@@ -18,15 +18,15 @@ interface Props {
 const Region = ({ name, passes, peaks }: RegionProps) => {
   const breadCrumbs = [
     {
-      name: "Regions",
-      link: "/regions",
+      name: 'Regions',
+      link: '/regions',
       id: 3,
       isLast: false,
     },
     {
       name,
-      link: "t3",
-      id: "5",
+      link: 't3',
+      id: '5',
       isLast: true,
     },
   ];

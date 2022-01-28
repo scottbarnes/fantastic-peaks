@@ -1,13 +1,13 @@
 // Template for individual pass pages.
-import Head from "next/head";
+import Head from 'next/head';
 
-import BreadCrumbs from "../../components/breadcrumbs";
-import Container from "../../components/container";
-import Header from "../../components/header";
-import Layout from "../../components/layout";
-import { getAllPassIds, getPassData } from "../../lib/passes";
-import metaDescriptionMaker from "../../lib/metaDescriptionMaker";
-import { PassProps } from "../../components/passItem";
+import BreadCrumbs from '../../components/breadcrumbs';
+import Container from '../../components/container';
+import Header from '../../components/header';
+import Layout from '../../components/layout';
+import { getAllPassIds, getPassData } from '../../lib/passes';
+import metaDescriptionMaker from '../../lib/metaDescriptionMaker';
+import { PassProps } from '../../components/passItem';
 
 interface Props {
   id: string;
@@ -34,14 +34,14 @@ const PassPage = ({
         <Header />
         <BreadCrumbs
           crumbs={[
-            { name: "Regions", link: "/regions", isLast: false },
+            { name: 'Regions', link: '/regions', isLast: false },
             { name: region, link: `/regions/${region_slug}`, isLast: false },
-            { name, link: "/", isLast: true },
+            { name, link: '/', isLast: true },
           ]}
         />
 
         <p className="font-semibold text-2xl mt-2 text-center">
-          {`${name} (${elevations.join(" ft.; ")} ft.)`}
+          {`${name} (${elevations.join(' ft.; ')} ft.)`}
         </p>
         <p className="font-semibold text-xl mt-2 text-center">{class_rating}</p>
         <div className="m:max-w-m justify-center flex">

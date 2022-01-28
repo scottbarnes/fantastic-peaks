@@ -1,7 +1,7 @@
 // An individual peak item as displayed in /regions/<slug>
 
-import Link from "next/link";
-import { RouteProps } from "./routeItem";
+import Link from 'next/link';
+import { RouteProps } from './routeItem';
 
 // Thanks to https://www.pluralsight.com/guides/use-interface-props-in-functional-components-using-typescript-with-react
 // for help with the interfaces
@@ -23,7 +23,7 @@ const PeakItem = ({ name, elevations, slug }: PeakProps): JSX.Element => (
         <a className="text-blue-700 hover:text-blue-900">{name}</a>
       </Link>
     </p>
-    <p>{`Elevation(s): ${elevations.join(" ft.; ")} ft.`}</p>
+    <p>{`Elevation(s): ${elevations.join(' ft.; ')} ft.`}</p>
   </div>
 );
 

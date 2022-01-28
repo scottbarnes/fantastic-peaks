@@ -2,8 +2,8 @@
 
 // import fs from 'fs';
 // import path from 'path';
-import { PassProps } from "../components/passItem";
-import { PeakProps } from "../components/peakItem";
+import { PassProps } from '../components/passItem';
+import { PeakProps } from '../components/peakItem';
 
 export type RegionProps = {
   slug: string;
@@ -20,7 +20,7 @@ export type RegionProps = {
 //
 export const regionsData = async () => {
   const response = await fetch(
-    `${process.env.REGIONS_API || "error reading file"}`
+    `${process.env.REGIONS_API || 'error reading file'}`,
   );
   const json = (await response.json()) as Promise<RegionProps[]>;
   return json;

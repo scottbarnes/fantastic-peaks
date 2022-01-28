@@ -1,9 +1,9 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
-import { faMountain } from "@fortawesome/free-solid-svg-icons";
-import { faDiscord } from "@fortawesome/free-brands-svg-icons";
-import LandingPageButton from "../components/landing-page-button";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+import { faMountain } from '@fortawesome/free-solid-svg-icons';
+import { faDiscord } from '@fortawesome/free-brands-svg-icons';
+import LandingPageButton from '../components/landing-page-button';
 
 const Home: NextPage = () => (
   <div className="bg-gradient-to-r from-indigo-600 to-indigo-900">
@@ -21,19 +21,19 @@ const Home: NextPage = () => (
         Fantastic Peaks
       </p>
       <p className="text-2xl md:text-3xl text-left">
-        {"{"}
+        {'{'}
         And Where To Find Them
-        {"}"}
+        {'}'}
       </p>
       <p className="text-2xl text-left pt-3">
-        {"A "}
+        {'A '}
         <a
           href="http://www.churchofthehighsierra.org/"
           className="text-sky-400 hover:text-sky-300"
         >
           Church of the High Sierra
         </a>
-        {" Project"}
+        {' Project'}
       </p>
 
       <p className="text-lg pt-3">
