@@ -8,11 +8,7 @@ export type RouteProps = {
   slug: string;
 };
 
-const RouteItem = ({
-  name,
-  class_rating,
-  description,
-}: RouteProps) => (
+const RouteItem = ({ name, class_rating, description }: RouteProps) => (
   <div className="">
     <p className="max-w-prose mt-4 font-semi-bold text-xl">
       {`${name}.(${class_rating})`}

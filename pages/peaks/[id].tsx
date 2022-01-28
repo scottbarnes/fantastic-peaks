@@ -74,7 +74,6 @@ export async function getStaticPaths() {
 
 // replace "async" when calling from API.
 export async function getStaticProps({ params }: { params: Props }) {
-  /* eslint-disable @typescript-eslint/await-thenable */
   const peakData = await getPeakData(params.id);
   return {
     props: {

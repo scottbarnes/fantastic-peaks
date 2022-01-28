@@ -65,7 +65,6 @@ export async function getStaticPaths() {
 // export const getStaticProps: GetStaticProps = async ({ params }) => {
 // replace async when calling from API
 export async function getStaticProps({ params }: { params: Props }) {
-  /* eslint-disable @typescript-eslint/await-thenable */
   const regionData = await getRegionData(params.id);
 
   if (!regionData) {

@@ -65,7 +65,6 @@ export async function getStaticPaths() {
 // getStaticProps gets the pass data and passes it via props to the page function.
 // Replace "async" when calling from API.
 export async function getStaticProps({ params }: { params: Props }) {
-  /* eslint-disable @typescript-eslint/await-thenable */
   const passData = await getPassData(params.id);
   return {
     props: {

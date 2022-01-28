@@ -1,4 +1,4 @@
-version: "3.2"
+version: '3.2'
 # e2e/cy-open.yml from repo
 # run with: docker-compose -f development.yml -f cy-open.yml up --exit-code-from cypress
 # https://github.com/bahmutov/cypress-open-from-docker-compose

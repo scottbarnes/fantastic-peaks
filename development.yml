@@ -1,9 +1,9 @@
-version: "3.8"
+version: '3.8'
 
 services:
   nextjs:
     build:
-      context: "."
+      context: '.'
       dockerfile: ./compose/development/Dockerfile
     image: fp_nextjs_dev
     container_name: fp_nextjs_dev
@@ -11,7 +11,7 @@ services:
       - /app/node_modules
       - .:/app
     ports:
-      - "3000:3000"
+      - '3000:3000'
 
   cypress:
     image: cypress/included:9.2.0
