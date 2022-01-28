@@ -1,11 +1,7 @@
 module.exports = {
-  plugins: [
-    "@typescript-eslint", 
-    "prettier",
-  ],
+  plugins: ["@typescript-eslint"],
   extends: [
-    "prettier",
-    // "plugin:prettier/recommended",
+    "plugin:prettier/recommended",
     "airbnb",
     "airbnb-typescript",
     "airbnb/hooks",
@@ -18,15 +14,16 @@ module.exports = {
     sourceType: "module",
     ecmaVersion: 2020,
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   settings: {
     react: {
-      version: "detect"
-    }
+      version: "detect",
+    },
   },
   rules: {
+    "prettier/prettier": ["error", { singleQuote: true, trailingComma: "all" }],
     "react/function-component-definition": [
       2,
       {
@@ -35,11 +32,15 @@ module.exports = {
     ],
     // Fix for anchor-is-valid
     // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/issues/402
-    "jsx-a11y/anchor-is-valid": [ "error", {
-      "components": [ "Link" ],
-      "specialLink": [ "hrefLeft", "hrefRight" ],
-      "aspects": [ "invalidHref", "preferButton" ]
-    }],
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        components: ["Link"],
+        specialLink: ["hrefLeft", "hrefRight"],
+        aspects: ["invalidHref", "preferButton"],
+      },
+    ],
     "react/jsx-props-no-spreading": "off",
+    // '@typescript-eslint/await-thenable': 'off',
   },
-}
+};
