@@ -30,7 +30,7 @@ export const getAllPassIds = async () => {
 };
 
 // getPassData returns the pass object matching the id/slug.
-export const getPassData = async (id: string): PassProps => {
+export const getPassData = async (id: string) => {
   const passes = await passesData();
   const pass = passes.filter((p) => p.slug === id);
   return {

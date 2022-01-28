@@ -22,7 +22,11 @@ const PeakPage = ({
   elevations,
   routes,
 }: PeakProps) => {
-  const metaDisc = metaDescriptionMaker(name, description);
+  const metaDisc = metaDescriptionMaker(
+    name,
+    description || "error finding description"
+  );
+  const regionWithDefault = region ?? "error finding region"; // Because region is optional.
 
   return (
     <Layout metaDescription={metaDisc}>
@@ -34,7 +38,11 @@ const PeakPage = ({
         <BreadCrumbs
           crumbs={[
             { name: "Regions", link: "/regions", isLast: false },
-            { name: region, link: `/regions/${region_slug}`, isLast: false },
+            {
+              name: regionWithDefault,
+              link: `/regions/${region_slug}`,
+              isLast: false,
+            },
             { name, link: "/", isLast: true },
           ]}
         />

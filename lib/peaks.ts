@@ -33,7 +33,7 @@ export const getAllPeakIds = async () => {
 };
 
 // getPeakData returns the object matching the id/slug.
-export const getPeakData = async (id: string): PeakProps => {
+export const getPeakData = async (id: string) => {
   const peaks = await peaksData();
   const peak = peaks.filter((p) => p.slug === id);
   return {

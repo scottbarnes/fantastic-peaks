@@ -2,14 +2,7 @@
 // Thanks to https://www.pluralsight.com/guides/use-interface-props-in-functional-components-using-typescript-with-react
 // for help with the interfaces
 
-import PeakItem from './peakItem';
-
-type PeakProps = {
-  // peaks: PeakProps[];
-  slug: string;
-  name: string;
-  elevations: string[];
-};
+import PeakItem, { PeakProps } from "./peakItem";
 
 type PeakListProps = {
   peaks: PeakProps[];
@@ -23,6 +16,10 @@ const PeaksList = ({ peaks }: PeakListProps): JSX.Element => (
         name={p.name}
         elevations={p.elevations}
         slug={p.slug}
+        description={p.description}
+        region={p.region}
+        region_slug={p.region_slug}
+        routes={p.routes}
       />
     ))}
   </>
